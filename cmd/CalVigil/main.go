@@ -1,13 +1,13 @@
 package main
 
 import (
-    "log"
-    "os"
+	"context"
+	"log"
 
-    "github.com/username/planfreebot/internal/bot"
-    "github.com/username/planfreebot/internal/config"
-    "github.com/username/planfreebot/internal/database"
-    "github.com/username/planfreebot/internal/services"
+	"github.com/natindo/CalVigil/internal/bot"
+	"github.com/natindo/CalVigil/internal/config"
+	"github.com/natindo/CalVigil/internal/database"
+	"github.com/natindo/CalVigil/internal/services"
 )
 
 func main() {
@@ -19,7 +19,8 @@ func main() {
     if err != nil {
         log.Fatalf("Не удалось подключиться к PostgreSQL: %v", err)
     }
-    defer dbConn.Close()
+    ctx := context.Background()
+    defer dbConn.Close(ctx)
 
     // 3. Создаём инстанс бота
     botAPI, err := bot.NewBot(cfg.TelegramToken)

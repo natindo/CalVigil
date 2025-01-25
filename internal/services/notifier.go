@@ -9,7 +9,7 @@ import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
 	"github.com/jackc/pgx/v5"
 
-	"github.com/username/planfreebot/internal/models"
+	"github.com/natindo/CalVigil/internal/models"
 )
 
 // StartNotifier запускает горутину, которая каждые 60 секунд проверяет события.

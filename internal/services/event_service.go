@@ -6,7 +6,7 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"github.com/username/planfreebot/internal/models"
+	"github.com/natindo/CalVigil/internal/models"
 )
 
 // InsertEvent вставляет новое событие в БД и возвращает его ID

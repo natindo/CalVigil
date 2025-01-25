@@ -1,4 +1,4 @@
-module example.com/mod
+module github.com/natindo/CalVigil
 
 go 1.22.0
 
